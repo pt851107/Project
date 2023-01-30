@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% load static %}     
-
+{% block content %}
 <!-- page wrapper starts -->
   <div id="page-wrapper">
         <!-- ==== Slider ==== -->
@@ -59,11 +59,11 @@
                              In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat lorem
                           </p>
                           <!-- button show on mobile only,where flip is disabled -->
-                          <a href="contact.html" class="btn d-lg-none">Contact us</a>
+                          <a href="{% url 'contact' %}" class="btn d-lg-none">Contact us</a>
                        </div>
                        <!-- /p-5 -->
                        <!-- image -->
-                       <img class="card-img" src="img/intro1.jpg" alt="">
+                       <img class="card-img" src="{% static 'img/intro1.jpg' %}" alt="">
                     </div>
                     <!-- /card -->
                     <!-- back of card -->  			
@@ -75,7 +75,7 @@
                                 In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat
                              </p>
                              <!-- button -->
-                             <a href="contact.html" class="btn">contact us</a>
+                             <a href="{% url 'contact' %}" class="btn">contact us</a>
                           </div>
                           <!-- /p-4 -->
                        </div>
@@ -101,7 +101,7 @@
                        </div>
                        <!-- /p-5 -->
                        <!-- image -->
-                       <img class="card-img" src="img/intro2.jpg" alt="">
+                       <img class="card-img" src="{% static 'img/intro2.jpg' %}" alt="">
                     </div>
                     <!-- /card -->
                     <!-- back of card -->  			
@@ -139,7 +139,7 @@
                        </div>
                        <!-- /p-5 -->
                        <!-- image -->
-                       <img class="card-img" src="img/intro3.jpg" alt="">
+                       <img class="card-img" src="{% static 'img/intro3.jpg' %}" alt="">
                     </div>
                     <!-- /card -->
                     <!-- back of card -->  			
@@ -180,12 +180,12 @@
                     <h3>Our Mission</h3>
                     <p class="mt-4 res-margin">Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecena Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
                     <p>Nec elementum ipsum convall. Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecen Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall Maecenas at arcu risus scelerisque laoree.</p>
-                    <a href="contact.html" class="btn btn-secondary ">Contact us</a>
+                    <a href="{% url 'contact' %}" class="btn btn-secondary ">Contact us</a>
                  </div>
                  <!-- /col-lg -->
                  <div class="col-lg-5 res-margin">
                     <!-- image -->
-                    <img class="img-fluid rounded" src="img/about/about2.jpg" alt="">
+                    <img class="img-fluid rounded" src="{% static 'img/about/about2.jpg' %}" alt="">
                     <!-- ornament starts-->
                     <div class="ornament-rainbow" data-aos="zoom-out"></div>
                  </div>
@@ -206,7 +206,7 @@
                        </div>
                        <!-- /content -->
                        <div class="testimonial-pic">
-                          <img src="img/team/team1.jpg" class="img-fluid" alt="">
+                          <img src="{% static 'img/team/team1.jpg' %}" class="img-fluid" alt="">
                        </div>
                        <!-- /testimonial-pic -->
                        <div class="testimonial-review">
@@ -225,7 +225,7 @@
                        </div>
                        <!-- /content -->
                        <div class="testimonial-pic">
-                          <img src="img/team/team2.jpg" class="img-fluid" alt="">
+                          <img src="{% static 'img/team/team2.jpg' %}" class="img-fluid" alt="">
                        </div>
                        <!-- /testimonial-pic -->
                        <div class="testimonial-review">
@@ -244,7 +244,7 @@
                        </div>
                        <!-- /content -->
                        <div class="testimonial-pic">
-                          <img src="img/team/team3.jpg" class="img-fluid" alt="">
+                          <img src="{% static 'img/team/team3.jpg' %}" class="img-fluid" alt="">
                        </div>
                        <!-- /testimonial-pic -->
                        <div class="testimonial-review">
@@ -262,7 +262,7 @@
            <!-- /container-->
            <!-- whale in water scene -->
            <!-- whale -->
-           <img src="img/ornaments/whale.png" class="floating-whale" alt="">
+           <img src="{% static 'img/ornaments/whale.png' %}" class="floating-whale" alt="">
            <!-- waves -->
            <div class="waveHorizontals">
               <div id="waveHorizontal1" class="waveHorizontal"></div>
@@ -338,7 +338,7 @@
                  <!-- /col-l -->
                  <div class="col-lg-6 features-bg">
                     <!-- image -->
-                    <img src="img/features.png" alt="" class="img-fluid"  data-aos="zoom-out"   data-aos-delay="300"/>
+                    <img src="{% static 'img/features.png' %}" alt="" class="img-fluid"  data-aos="zoom-out"   data-aos-delay="300"/>
                  </div>
                  <!-- /col-l -->
               </div>
@@ -377,7 +377,7 @@
                              <div class="row">
                                 <div class="col-lg-6">
                                    <!-- image -->
-                                   <img src="img/services/service1.jpg" alt="" class="rounded img-fluid">
+                                   <img src="{% static 'img/services/service1.jpg' %}" alt="" class="rounded img-fluid">
                                    <!-- ornament starts-->
                                    <div class="ornament-rainbow" data-aos="fade-right"></div>
                                 </div>
@@ -414,7 +414,7 @@
                                 <!-- /col-lg -->
                                 <div class="col-lg-6 res-margin">
                                    <!-- image -->
-                                   <img src="img/services/service2.jpg" alt="" class="rounded img-fluid">
+                                   <img src="{% static 'img/services/service2.jpg' %}" alt="" class="rounded img-fluid">
                                    <!-- ornament starts-->
                                    <div class="ornament-stars" data-aos="fade-right"></div>
                                 </div>
@@ -427,7 +427,7 @@
                              <div class="row">
                                 <div class="col-lg-6">
                                    <!-- image -->
-                                   <img src="img/services/service3.jpg" alt="" class="rounded img-fluid">
+                                   <img src="{% static 'img/services/service3.jpg' %}" alt="" class="rounded img-fluid">
                                    <!-- ornament starts-->
                                    <div class="ornament-bubbles" data-aos="fade-right"></div>
                                 </div>
@@ -464,7 +464,7 @@
                                 <!-- /col-lg -->
                                 <div class="col-lg-6 res-margin">
                                    <!-- image -->
-                                   <img src="img/services/service4.jpg" alt="" class="rounded img-fluid">
+                                   <img src="{% static 'img/services/service4.jpg' %}" alt="" class="rounded img-fluid">
                                    <!-- ornament starts-->
                                    <div class="ornament-stars" data-aos="fade-right"></div>
                                 </div>
@@ -477,7 +477,7 @@
                              <div class="row">
                                 <div class="col-lg-6">
                                    <!-- image -->
-                                   <img src="img/services/service5.jpg" alt="" class="rounded img-fluid">
+                                   <img src="{% static 'img/services/service5.jpg' %}" alt="" class="rounded img-fluid">
                                    <!-- ornament starts-->
                                    <div class="ornament-rainbow" data-aos="fade-right"></div>
                                 </div>
@@ -580,7 +580,7 @@
               </div>
               <!-- /col-lg-->
               <div class="col-lg-5 res-margin">
-                 <img src="img/team/team-home.jpg" alt="" class="img-fluid blob2">
+                 <img src="{% static 'img/team/team-home.jpg' %}" alt="" class="img-fluid blob2">
                  <!-- ornament starts-->
                  <div class="ornament-stars" data-aos="fade-down"></div>
               </div>
@@ -592,7 +592,7 @@
                     <div class="col-md-12 team-style1 notepad">
                        <div class="team_img">
                           <a href="team-single.html">
-                          <img src="img/team/team1.jpg" class="img-fluid" alt="">
+                          <img src="{% static 'img/team/team1.jpg' %}" class="img-fluid" alt="">
                           </a>
                           <!-- social icons -->
                           <ul class="social">
@@ -617,7 +617,7 @@
                     <div class="col-md-12 team-style1 notepad">
                        <div class="team_img">
                           <a href="team-single.html">
-                          <img src="img/team/team2.jpg" class="img-fluid" alt="">
+                          <img src="{% static 'img/team/team2.jpg' %}" class="img-fluid" alt="">
                           </a>
                           <!-- social icons -->
                           <ul class="social">
@@ -642,7 +642,7 @@
                     <div class="col-md-12 team-style1 notepad">
                        <div class="team_img">
                           <a href="team-single.html">
-                          <img src="img/team/team3.jpg" class="img-fluid" alt="">
+                          <img src="{% static 'img/team/team3.jpg' %}" class="img-fluid" alt="">
                           </a>
                           <!-- social icons -->
                           <ul class="social">
@@ -667,7 +667,7 @@
                     <div class="col-md-12 team-style1 notepad">
                        <div class="team_img">
                           <a href="team-single.html">
-                          <img src="img/team/team4.jpg" class="img-fluid" alt="">
+                          <img src="{% static 'img/team/team4.jpg' %}" class="img-fluid" alt="">
                           </a>
                           <!-- social icons -->
                           <ul class="social">
@@ -692,7 +692,7 @@
                     <div class="col-md-12 team-style1 notepad">
                        <div class="team_img">
                           <a href="team-single.html">
-                          <img src="img/team/team5.jpg" class="img-fluid" alt="">
+                          <img src="{% static 'img/team/team5.jpg' %}" class="img-fluid" alt="">
                           </a>
                           <!-- social icons -->
                           <ul class="social">
@@ -749,9 +749,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 activities">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery1.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery1.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery1.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery1.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -760,9 +760,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 school">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery2.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery2.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery2.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery2.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -771,9 +771,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 school">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery3.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery3.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery3.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery3.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -1146,7 +1146,47 @@
                     <!-- /contact-info-->
                     <div class="col-lg-5">
                        <!-- map-->
-                       <div id="map-canvas" class="mt-5 rounded"></div>
+                       <div id="map-canvas" class="mt-5 rounded leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative; outline: none;">
+                        <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-97px, 0px, 0px);">
+                           <div class="class leaflet-pane leaflet-tile-pane">
+                              <div class="leaflet-layer" style="z-index: 1; opacity: 1;">
+                                 <div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 22; transform: translate3d(0px, 0px, 0px) scale(1)">
+                                    <img alt role="presentation" src="https://a.tile.openstreetmap.org/19/154360/197072.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(27px, -151px, 0px); opacity: 1;">
+                                    <img alt role="presentation" src="https://b.tile.openstreetmap.org/19/154360/197073.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(27px, 105px, 0px); opacity: 1;">
+                                    <img alt role="presentation" src="https://c.tile.openstreetmap.org/19/154359/197072.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-229px, -151px, 0px); opacity: 1;">
+                                    <img alt role="presentation" src="https://b.tile.openstreetmap.org/19/154361/197072.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(283px, -151px, 0px); opacity: 1;">
+                                    <img alt role="presentation" src="https://a.tile.openstreetmap.org/19/154359/197073.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-229px, 105px, 0px); opacity: 1;">
+                                    <img alt role="presentation" src="https://c.tile.openstreetmap.org/19/154361/197073.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(283px, 105px, 0px); opacity: 1;">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="leaflet-pane leaflet-shadow-pane"></div>
+                           <div class="leaflet-pane leaflet-overlay-pane"></div>
+                           <div class="leaflet-pane leaflet-marker-pane">
+                              <img src="{%static 'img/mapmarker.png'%}" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt tabindex="0" style="margin-left: -32px; margin-top: -63px; width: 64px; height: 64px; transform: translate3d(209px, 175px, 0px); z-index: 175;">
+                           </div>
+                           <div class="leaflet-pane leaflet-tooltip-pane"></div>
+                           <div class="leaflet-pane leaflet-popup-pane"></div>
+                           <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(3.95163e+07px, 5.04508e+07px, 0px) scale(262144);"></div>
+                        </div>
+                        <div class="leaflet-control-container">
+                           <div class="leaflet-top leaflet-left">
+                              <div class="leaflet-control-zoom leaflet-bar leaflet-control">
+                                 <a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a>
+                                 <a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">-</a>
+                              </div>
+                           </div>
+                           <div class="leaflet-top leaflet-right"></div>
+                           <div class="leaflet-bottom leaflet-left"></div>
+                           <div class="leaflet-bottom leaflet-right">
+                              <div class="leaflet-control-attribution leaflet-control">
+                                 <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>
+                                 " | © "
+                                 <a href="http://www.openstreetmap.org/copyright" >OpenStreetMap</a>
+                              </div>
+                           </div>
+                        </div>
+                       </div>
                     </div>
                     <!-- ornament starts-->
                     <div class="ornament-stars mt-8" data-aos="zoom-out"></div>
@@ -1160,4 +1200,4 @@
         <!-- /Section -->
   </div>
  <!--/ page-wrapper -->
-      
+{% endblock %}      

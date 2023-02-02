@@ -1,14 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from services.models import Service
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'pages/index.html')
+    services = Service.objects.all()
+    context = {
+        'services': services
+    }
+    return render(request, 'pages/index.html', context)
 
 def services(request):
-    return render(request, 'services/services.html')
+    return render(request, 'pages/services.html')
 
 def pricing(request):
     return render(request, 'pages/pricing.html')

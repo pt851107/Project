@@ -61,107 +61,29 @@
               <div class="container">
                  <div class="carousel-3items owl-carousel owl-theme col-lg-12">
                     <!-- service 1  -->
+                    {% if services %}
+                    {% for service in services %}
                     <div class="serviceBox2">
                        <!-- service icon -->
                        <div class="service-icon">
-                          <a href="services-single.html">
-                          <img src="img/services/service1.jpg" alt="" class="blob img-fluid">
+                          <a href="{% url 'service' service.id %}">
+                          <img src="{{service.photo_main.url}}" alt="" class="blob img-fluid">
                           </a>
                        </div>
                        <!-- service content -->
                        <div class="service-content">
-                          <a href="services-single.html">
-                             <h4 class="service-head">Daycare</h4>
+                          <a href="{% url 'service' service.id %}">
+                             <h4 class="service-head">{{service.title}}</h4>
                           </a>
                           <p>
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
+                             {{service.short_description}}
                           </p>
                           <!-- Button -->	 
-                          <a href="services-single.html" class="btn btn-quaternary  btn-sm mt-2 ml-1">Read More</a>
+                          <a href="{% url 'service' service.id %}" class="btn btn-quaternary  btn-sm mt-2 ml-1">Read More</a>
                        </div>
                     </div>
-                    <!-- service 2  -->
-                    <div class="serviceBox2">
-                       <!-- service icon -->
-                       <div class="service-icon">
-                          <a href="services-single.html">
-                          <img src="img/services/service2.jpg" alt="" class="blob2 img-fluid">
-                          </a>
-                       </div>
-                       <!-- service content -->
-                       <div class="service-content">
-                          <a href="services-single.html">
-                             <h4 class="service-head">Summer Camp</h4>
-                          </a>
-                          <p>
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
-                          </p>
-                          <!-- Button -->	 
-                          <a href="services-single.html" class="btn btn-quaternary btn-sm mt-2 ml-1">Read More</a>
-                       </div>
-                    </div>
-                    <!-- service 3  -->
-                    <div class="serviceBox2">
-                       <!-- service icon -->
-                       <div class="service-icon">
-                          <a href="services-single.html">
-                          <img src="img/services/service3.jpg" alt="" class="blob img-fluid">
-                          </a>			   
-                       </div>
-                       <!-- service content -->
-                       <div class="service-content">
-                          <a href="services-single.html">
-                             <h4 class="service-head">Infant Care</h4>
-                          </a>
-                          <p>
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
-                          </p>
-                          <!-- Button -->	 
-                          <a href="services-single.html" class="btn btn-quaternary btn-sm mt-2 ml-1">Read More</a>
-                       </div>
-                    </div>
-                    <!-- service 4  -->
-                    <div class="serviceBox2">
-                       <!-- service icon -->
-                       <div class="service-icon">
-                          <a href="services-single.html">
-                          <img src="img/services/service4.jpg" alt="" class="blob2 img-fluid">
-                          </a>
-                       </div>
-                       <!-- service content -->
-                       <div class="service-content">
-                          <a href="services-single.html">
-                             <h4 class="service-head">Classes</h4>
-                          </a>
-                          <p>
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
-                          </p>
-                          <!-- Button -->	 
-                          <a href="services-single.html" class="btn btn-quaternary btn-sm mt-2 ml-1">Read More</a>
-                       </div>
-                    </div>
-                    <!-- service 5 -->
-                    <div class="serviceBox2">
-                       <!-- service icon -->
-                       <div class="service-icon">
-                          <a href="services-single.html">
-                          <img src="img/services/service5.jpg" alt="" class="blob img-fluid">
-                          </a>
-                       </div>
-                       <!-- service content -->
-                       <div class="service-content">
-                          <a href="services-single.html">
-                             <h4 class="service-head">Activities</h4>
-                          </a>
-                          <p>
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
-                          </p>
-                          <!-- Button -->	 
-                          <a href="services-single.html" class="btn btn-quaternary btn-sm mt-2 ml-1">Read More</a>
-                       </div>
-                    </div>
-                 </div>
-                 <!-- /owl-services -->
+                    {% endfor %}
+                    {% endif %}
               </div>
               <!-- /container -->
            </div>

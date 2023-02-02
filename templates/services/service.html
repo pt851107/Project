@@ -15,7 +15,7 @@
                     <ol class="breadcrumb">
                        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
                        <li class="breadcrumb-item"><a href="{% url 'services' %}">Services</a></li>
-                       <li class="breadcrumb-item active" aria-current="page">{{service.title}}}</li>
+                       <li class="breadcrumb-item active" aria-current="page">{{service.title}}</li>
                     </ol>
                  </nav>
                  <!-- /breadcrumb -->
@@ -32,19 +32,18 @@
                  <!-- page with sidebar starts -->
                  <div class="col-lg-9 page-with-sidebar">
                     <div class="col-md-12">
-                       <h2>Daycare</h2>
+                       <h2>{{service.title}}</h2>
                        <!-- Image -->
-                       <p class="h7">Maecenas at arcu risus scelerisque laoree.</p>
-                       <p>Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall Maecenas at arcu risus scelerisque laoree.
-                          Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.
+                       <p class="h7">{{service.short_description}}</p>
+                       <p>{{service.description}}
                        </p>
                        <!-- row -->
                        <div class="row">
                           <div class="col-md-5">
                              <div class="col-md-12 carousel-1item owl-carousel owl-theme "  data-aos="fade-in" >
-                                <img src="img/services/service-single1.jpg" class="img-fluid rounded-circle" alt="">
-                                <img src="img/services/service-single2.jpg" class="img-fluid rounded-circle" alt="">
-                                <img src="img/services/service-single3.jpg" class="img-fluid rounded-circle" alt="">
+                                <img src="{{service.photo_main.url}}" class="img-fluid rounded-circle" alt="">
+                                <img src="{{service.photo_1.url}}" class="img-fluid rounded-circle" alt="">
+                                <img src="{{service.photo_1.url}}" class="img-fluid rounded-circle" alt="">
                              </div>
                              <!-- /col-md- -->
                           </div>
@@ -52,11 +51,10 @@
                           <div class="col-md-7">
                              <h4>Fun Activities</h4>
                              <!-- Image -->
-                             <p>Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall Maecenas at arcu risus scelerisque laoree.
-                                Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.
+                             <p>{{service.fun_activities}}
                              </p>
                              <!-- Button -->	 
-                             <a href="contact.html" class="btn btn-secondary mt-3">Contact us</a>
+                             <a href="{% url 'contact' %}" class="btn btn-secondary mt-3">Contact us</a>
                           </div>
                           <!-- /col-md -->
                           <div class="col-md-12 mt-5">
@@ -130,25 +128,25 @@
                     <!-- /col-md-12 -->
                  </div>
                  <!-- /col-lg-9 -->
-                 <!-- ==== Sidebar ==== -->
-                 <div id="sidebar" class="col-lg-3 h-50 sticky-top">
-                    <!--widget area-->
-                    <div class="widget-area notepad">
-                       <h5 class="sidebar-header">All Services</h5>
-                       <div class="list-group">
-                          <a href="#" class="list-group-item list-group-item-action active">
-                          Daycare
-                          </a>
-                          <a href="#" class="list-group-item list-group-item-action">Summer Camp</a>
-                          <a href="#" class="list-group-item list-group-item-action">Infant Care</a>
-                          <a href="#" class="list-group-item list-group-item-action">Classes</a>
-                          <a href="#" class="list-group-item list-group-item-action">Activities</a>
-                       </div>
-                       <!-- /list-group -->
-                    </div>
-                    <!-- /widget-area -->
-                 </div>
-                 <!-- /sidebar -->
+                  <!-- ==== Sidebar ==== -->
+                  <div id="sidebar" class="col-lg-3 h-50 sticky-top">
+                     <!--widget area-->
+                     <div class="widget-area notepad">
+                        <h5 class="sidebar-header">All Services</h5>
+                        <div class="list-group">
+                           <a href="#" class="list-group-item list-group-item-action">
+                           Daycare
+                           </a>
+                           <a href="#"class="list-group-item list-group-item-action">Summer Camp</a>
+                           <a href="#"  class="list-group-item list-group-item-action">Infant Care</a>
+                           <a href="#"  class="list-group-item list-group-item-action">Classes</a>
+                           <a href="#" class="list-group-item list-group-item-action">Activities</a>
+                        </div>
+                        <!-- /list-group -->
+                     </div>
+                     <!-- /widget-area -->
+                  </div>
+                  <!-- /sidebar -->
               </div>
               <!-- /row-->
            </div>

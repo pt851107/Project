@@ -12,17 +12,18 @@ def index(request):
     }
     return render(request, 'pages/index.html', context)
 
+
 def services(request):
     return render(request, 'pages/services.html')
 
-def pricing(request):
-    return render(request, 'pages/pricing.html')
 
 def about(request):
     return render(request, 'pages/about.html')
 
+
 def gallery(request):
     return render(request, 'pages/gallery.html')
+
 
 def contact(request):
     return render(request, 'pages/contact.html')

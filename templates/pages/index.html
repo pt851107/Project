@@ -135,7 +135,7 @@
                              In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat lorem
                           </p>
                           <!-- button show on mobile only,where flip is disabled -->
-                          <a href="team.html" class="btn d-lg-none">Our Team</a>
+                          <a href="{% url 'teachers' %}" class="btn d-lg-none">Our Team</a>
                        </div>
                        <!-- /p-5 -->
                        <!-- image -->
@@ -151,7 +151,7 @@
                                 In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat
                              </p>
                              <!-- button -->
-                             <a href="team.html" class="btn">Our Team</a>
+                             <a href="{% url 'teachers' %}" class="btn">Our Team</a>
                           </div>
                           <!-- /p-4 -->
                        </div>
@@ -191,73 +191,6 @@
                  </div>
                  <!-- /col-lg -->
               </div>
-              <!-- /row -->
-              <h3 class="mt-5 text-center">What Parents say:</h3>
-              <div class="row">
-                 <!-- testimonials -->
-                 <!-- testimonial carousel -->
-                 <div class="carousel-2items owl-carousel owl-theme col-md-12">
-                    <!-- testimonial -->
-                    <div class="testimonial">
-                       <div class="content">
-                          <p class="description">
-                             Scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.                        
-                          </p>
-                       </div>
-                       <!-- /content -->
-                       <div class="testimonial-pic">
-                          <img src="{% static 'img/team/team1.jpg' %}" class="img-fluid" alt="">
-                       </div>
-                       <!-- /testimonial-pic -->
-                       <div class="testimonial-review">
-                          <h5 class="testimonial-title">Lucianna Smith</h5>
-                          <span class="post">Teacher</span>
-                       </div>
-                       <!-- /testimonial-review -->
-                    </div>
-                    <!-- /testimonial -->
-                    <!-- testimonial -->
-                    <div class="testimonial">
-                       <div class="content">
-                          <p class="description">
-                             Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.                        
-                          </p>
-                       </div>
-                       <!-- /content -->
-                       <div class="testimonial-pic">
-                          <img src="{% static 'img/team/team2.jpg' %}" class="img-fluid" alt="">
-                       </div>
-                       <!-- /testimonial-pic -->
-                       <div class="testimonial-review">
-                          <h5 class="testimonial-title">John Sadana</h5>
-                          <span class="post">Doctor</span>
-                       </div>
-                       <!-- /testimonial-review -->
-                    </div>
-                    <!-- /testimonial -->
-                    <!-- testimonial -->
-                    <div class="testimonial">
-                       <div class="content">
-                          <p class="description">
-                             Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.                        
-                          </p>
-                       </div>
-                       <!-- /content -->
-                       <div class="testimonial-pic">
-                          <img src="{% static 'img/team/team3.jpg' %}" class="img-fluid" alt="">
-                       </div>
-                       <!-- /testimonial-pic -->
-                       <div class="testimonial-review">
-                          <h5 class="testimonial-title">Jane Janeth</h5>
-                          <span class="post">Librarian</span>
-                       </div>
-                       <!-- /testimonial-review -->
-                    </div>
-                    <!-- /testimonial -->
-                 </div>
-                 <!-- /owl-testimonial -->      
-              </div>
-              <!-- /row -->
            </div>
            <!-- /container-->
            <!-- whale in water scene -->
@@ -377,7 +310,7 @@
                            <div class="row">
                               <div class="col-lg-6">
                                  <!-- image -->
-                                 <img src="img/services/service1.jpg" alt="" class="rounded img-fluid">
+                                 <img src="{% static 'img/services/service1.jpg' %}" alt="" class="rounded img-fluid">
                                  <!-- ornament starts-->
                                  <div class="ornament-rainbow" data-aos="fade-right"></div>
                               </div>
@@ -391,7 +324,7 @@
                                     <li>Educational activities in our daily plan</li>
                                  </ul>
                                  <!-- Button -->	 
-                                 <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
+                                 <a href="{% url 'service' 1 %}" class="btn btn-secondary mt-4">Read More</a>
                               </div>
                               <!-- /col-lg -->
                            </div>
@@ -409,12 +342,12 @@
                                     <li>Educational activities in our daily plan</li>
                                  </ul>
                                  <!-- Button -->	 
-                                 <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
+                                 <a href="{% url 'service' 2 %}" class="btn btn-secondary mt-4">Read More</a>
                               </div>
                               <!-- /col-lg -->
                               <div class="col-lg-6 res-margin">
                                  <!-- image -->
-                                 <img src="img/services/service2.jpg" alt="" class="rounded img-fluid">
+                                 <img src="{% static 'img/services/service2.jpg' %}" alt="" class="rounded img-fluid">
                                  <!-- ornament starts-->
                                  <div class="ornament-stars" data-aos="fade-right"></div>
                               </div>
@@ -427,7 +360,7 @@
                            <div class="row">
                               <div class="col-lg-6">
                                  <!-- image -->
-                                 <img src="img/services/service3.jpg" alt="" class="rounded img-fluid">
+                                 <img src="{% static 'img/services/service3.jpg' %}" alt="" class="rounded img-fluid">
                                  <!-- ornament starts-->
                                  <div class="ornament-bubbles" data-aos="fade-right"></div>
                               </div>
@@ -441,7 +374,7 @@
                                     <li>Educational activities in our daily plan</li>
                                  </ul>
                                  <!-- Button -->	 
-                                 <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
+                                 <a href="{% url 'service' 3 %}" class="btn btn-secondary mt-4">Read More</a>
                               </div>
                               <!-- /col-lg -->
                            </div>
@@ -459,12 +392,12 @@
                                     <li>Educational activities in our daily plan</li>
                                  </ul>
                                  <!-- Button -->	 
-                                 <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
+                                 <a href="{% url 'service' 4 %}" class="btn btn-secondary mt-4">Read More</a>
                               </div>
                               <!-- /col-lg -->
                               <div class="col-lg-6 res-margin">
                                  <!-- image -->
-                                 <img src="img/services/service4.jpg" alt="" class="rounded img-fluid">
+                                 <img src="{% static 'img/services/service4.jpg' %}" alt="" class="rounded img-fluid">
                                  <!-- ornament starts-->
                                  <div class="ornament-stars" data-aos="fade-right"></div>
                               </div>
@@ -477,7 +410,7 @@
                            <div class="row">
                               <div class="col-lg-6">
                                  <!-- image -->
-                                 <img src="img/services/service5.jpg" alt="" class="rounded img-fluid">
+                                 <img src="{% static 'img/services/service5.jpg' %}" alt="" class="rounded img-fluid">
                                  <!-- ornament starts-->
                                  <div class="ornament-rainbow" data-aos="fade-right"></div>
                               </div>
@@ -491,7 +424,7 @@
                                     <li>Educational activities in our daily plan</li>
                                  </ul>
                                  <!-- Button -->	 
-                                 <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
+                                 <a href="{% url 'service' 5 %}" class="btn btn-secondary mt-4">Read More</a>
                               </div>
                               <!-- /col-lg -->
                            </div>
@@ -782,9 +715,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 activities">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery4.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery4.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery4.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery4.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -793,9 +726,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 school">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery5.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery5.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery5.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery5.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -804,9 +737,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 school">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery6.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery6.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery6.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery6.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -815,9 +748,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 activities">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery7.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery7.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery7.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery7.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -826,9 +759,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 activities">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery8.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery8.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery8.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery8.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -837,9 +770,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 school">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery9.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery9.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery9.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery9.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -848,9 +781,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 school">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery10.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery10.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery10.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery10.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -859,9 +792,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 school">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery11.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery11.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery11.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery11.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -870,9 +803,9 @@
                  <div class="col-sm-6 col-md-6 col-lg-4 school">
                     <div class="portfolio-item">
                        <div class="gallery-thumb">
-                          <img class="img-fluid " src="img/gallery/gallery12.jpg" alt="">
+                          <img class="img-fluid " src="{% static 'img/gallery/gallery12.jpg' %}" alt="">
                           <span class="overlay-mask"></span>
-                          <a href="img/gallery/gallery12.jpg" class="link centered" title="You can add caption to pictures.">
+                          <a href="{% static 'img/gallery/gallery12.jpg' %}" class="link centered" title="You can add caption to pictures.">
                           <i class="fa fa-expand"></i></a>
                        </div>
                     </div>
@@ -891,7 +824,7 @@
                  <div class="col-lg-6 p-0" data-start="right: 50%;" 
                     data-center="right:-5%;">
                     <!-- image  -->
-                    <img src="img/call-to-action/calltoactionbg.jpg" class="img-fluid img-rounded" alt="">
+                    <img src="{% static 'img/call-to-action/calltoactionbg.jpg' %}" class="img-fluid img-rounded" alt="">
                  </div>
                  <!-- text box  -->
                  <div class="col-lg-6 bg-secondary p-5 justify-content-center align-self-center"  data-start="left: 50%;" 

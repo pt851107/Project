@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'services.apps.ServicesConfig',
     'teachers.apps.TeachersConfig',
     'pricings.apps.PricingsConfig',
-    'gallery.apps.GalleryConfig',
+    'gallerys.apps.GallerysConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

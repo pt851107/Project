@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from services.models import Service
 from teachers.models import Teacher
+from gallerys.models import Gallery
 
 # Create your views here.
 
@@ -25,7 +26,11 @@ def about(request):
 
 
 def gallery(request):
-    return render(request, 'pages/gallery.html')
+    gallerys = Gallery.objects.all()
+    context = {
+        'gallerys': gallerys
+    }
+    return render(request, 'pages/gallery.html', context)
 
 
 def contact(request):

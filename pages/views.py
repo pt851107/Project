@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from teachers.models import Teacher
 from gallerys.models import Gallery
+from summercamp.models import Product
 
 # Create your views here.
 
@@ -9,9 +10,11 @@ from gallerys.models import Gallery
 def index(request):
     teachers = Teacher.objects.all()
     gallerys = Gallery.objects.all()
+    summercamp = Product.objects.all()
     context = {
         'teachers': teachers,
-        'gallerys': gallerys
+        'gallerys': gallerys,
+        'summercamp': summercamp
     }
     return render(request, 'pages/index.html', context)
 
@@ -22,7 +25,11 @@ def infantcare(request):
     return render(request, 'pages/infantcare.html')
 
 def summercamp(request):
-    return render(request, 'summercamp.html')
+    summercamp = Product.objects.all()
+    context = {
+        'summercamp': summercamp
+    }
+    return render(request, 'summercamp/summercamp.html',context)
 
 def classes(request):
     return render(request, 'pages/classes.html')

@@ -32,9 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
-    'services.apps.ServicesConfig',
+    'summercamp.apps.SummercampConfig',
     'teachers.apps.TeachersConfig',
-    'pricings.apps.PricingsConfig',
     'gallerys.apps.GallerysConfig',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -25,47 +25,10 @@
          <!-- /jumbotron -->
          <!-- ==== Page Content ==== -->
          <div class="page">
-            <div class="container block-padding">
-               <!-- Team style 1 -->
-               <h3 class="text-center">Team Style 1</h3>
-               <!-- team carousel -->  
-               {% if teachers %}
-               <div class="carousel-4items owl-carousel owl-theme mt-5">
-               {% for teacher in teachers %}
-                  <!-- Team member 1 -->
-                  <div class="col-md-12 team-style1 notepad">
-                     <div class="team_img">
-                        <a href="{% url 'teacher' teacher.id %}">
-                        <img src="{{teacher.photo.url}}" class="img-fluid" alt="">
-                        </a>
-                        <!-- social icons -->
-                        <ul class="social">
-                           <li><a href="{{teacher.email}}"><i class="fa fa-envelope"></i></a></li>
-                           <li><a href="{{teacher.facebook}}"><i class="fab fa-facebook"></i></a></li>
-                           <li><a href="{{teacher.twitter}}"><i class="fab fa-twitter"></i></a></li>
-                           <li><a href="{{teacher.linkedin}}"><i class="fab fa-linkedin"></i></a></li>
-                        </ul>
-                     </div>
-                     <!-- /team_img -->
-                     <div class="team-content">
-                        <a href="{% url 'teacher' teacher.id %}">
-                           <h5 class="title">{{teacher.name}}</h5>
-                        </a>
-                        <span class="post">{{teacher.profession}}</span>
-                        <p>{{teacher.description}}</p>
-                     </div>
-                     <!-- /team-content -->
-                  </div>
-                  <!-- /team-style1 -->
-                  {% endfor %}
-               </div>
-               {% else %}
-               <p>no teacher information available now</p>
-               {% endif %}
-               <!-- /owl-team--> 
-            </div>
-            <!-- /container-->
+         <!-- Team style 1 -->
+                        <h3 class="text-center">Our Team</h3>
 
+            {% include "partials/_ourteam.html" %}
 
             <div class="bg-light block-padding">
                <!-- Team style 2 -->

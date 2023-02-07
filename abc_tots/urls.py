@@ -21,8 +21,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('pages.urls')),
     path('summercamp/', include('summercamp.urls')),
+    path('daycare/', include('daycare.urls')),
     path('teachers/', include('teachers.urls')),
     path('gallerys/', include('gallerys.urls')),
     path('admin/', admin.site.urls)
-]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

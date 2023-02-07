@@ -18,27 +18,30 @@ def index(request):
     }
     return render(request, 'pages/index.html', context)
 
-def daycare(request):
-    return render(request, 'pages/daycare.html')
 
 def infantcare(request):
     return render(request, 'pages/infantcare.html')
+
 
 def summercamp(request):
     summercamp = Product.objects.all()
     context = {
         'summercamp': summercamp
     }
-    return render(request, 'summercamp/summercamp.html',context)
+    return render(request, 'summercamp/summercamp.html', context)
+
 
 def classes(request):
     return render(request, 'pages/classes.html')
 
+
 def activities(request):
     return render(request, 'pages/activities.html')
 
+
 def contact(request):
     return render(request, 'pages/contact.html')
+
 
 def teachers(request):
     return render(request, 'pages/teachers.html')

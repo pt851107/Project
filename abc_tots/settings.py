@@ -35,11 +35,8 @@ INSTALLED_APPS = [
     'summercamp.apps.SummercampConfig',
     'teachers.apps.TeachersConfig',
     'gallerys.apps.GallerysConfig',
-<<<<<<< HEAD
     'shopping_cart.apps.ShoppingCartConfig',
-=======
     'daycare.apps.DaycareConfig',
->>>>>>> main
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

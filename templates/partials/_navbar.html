@@ -17,13 +17,13 @@
                  <ul class="social-list float-left list-inline">
                     <li class="list-inline-item"><a title="Facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="list-inline-item"><a title="Twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a  title="Instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a title="Instagram" href="#"><i class="fab fa-instagram"></i></a></li>
                  </ul>
                  <!-- /End Social Links -->
                  <!-- Cart & Login -->
-                 <ul class="cart float-right list-inline">
-                      <li class="list-inline-item"><a href="#">Cart</a></li>
-                      <li class="list-inline-item"><a href="#">Log In</a></li>
+                 <ul class="contact-details float-right">
+                      <li><i class="fa fa-shopping-cart"></i><a href="#">Cart</a></li>
+                      <li><i class="fa fa-user"></i><a href="#">Log In</a></li>
                  </ul>
                  <!-- /End Cart & Login -->
               </div>
@@ -51,6 +51,11 @@
                 <ul class="navbar-nav ml-auto">
                    <!-- menu item -->
                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'index' %}">Home
+                      </a>
+                   </li>
+                   <!-- menu item -->
+                   <li class="nav-item">
                       <a class="nav-link" href="{% url 'daycare' %}">Daycare
                       </a>
                    </li>
@@ -66,7 +71,7 @@
                   </li>
                    <!-- menu item -->
                    <li class="nav-item">
-                     <a class="nav-link" href="{% url 'classes' %}">Classes                     </a>
+                     <a class="nav-link" href="{% url 'classes' %}">Classes</a>
                   </li>
                    <!-- menu item -->
                    <li class="nav-item">

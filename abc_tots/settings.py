@@ -35,7 +35,11 @@ INSTALLED_APPS = [
     'summercamp.apps.SummercampConfig',
     'teachers.apps.TeachersConfig',
     'gallerys.apps.GallerysConfig',
+<<<<<<< HEAD
+    'shopping_cart.apps.ShoppingCartConfig',
+=======
     'daycare.apps.DaycareConfig',
+>>>>>>> main
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -135,3 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+<<<<<<< HEAD
+CART_SESSION_ID = 'shopping_cart'
+=======
+>>>>>>> main

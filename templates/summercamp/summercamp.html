@@ -8,7 +8,7 @@
            <div class="container" >
               <!-- jumbo-heading -->
               <div class="jumbo-heading" data-aos="fade-down">
-                 <h1>Services</h1>
+                 <h1>Summer Camp</h1>
                  <!-- Breadcrumbs -->
                  <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -23,21 +23,7 @@
            <!-- /container -->
         </div>
         <!-- /jumbotron -->
-         <!-- ==== Page Content ==== -->
-         <div>
-            <div id="main" class="product-list">
-                {% for product in products %}
-                <div class="item">
-                    <a href="{{product.get_absolute_url}}">
-                        <img src="{% if product.image %}{{product.image.url}}{% else %}{% static 'img/image.png' %}{% endif %}">
-                    </a>
-                    <a href="{{product.get_absolute_url}}">{{product.name}}</a>
-                    <br>
-                    Rs{{product.price}}
-                </div>
-                {% endfor %}
-            </div>
-         </div>      
+         <!-- ==== Page Content ==== -->   
             <!-- SVG divider  -->
             <svg version="1.1" id="divider" class="primary" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 1440 126" preserveAspectRatio="none slice" xml:space="preserve">
@@ -45,110 +31,36 @@
             </svg>
             <!-- services carousel -->
             <div class="container-fluid bg-primary block-padding pattern2 pt-lg-0">
-               <h2 class="text-light text-center">Find Your Perfect Summer Camp!</h2>
+               <h2 class="text-light text-center">Find Your Prefect Summer Camp</h2>
                <!-- image  -->
                <div class="container">
                   <div class="carousel-3items owl-carousel owl-theme col-lg-12">
+                     {% if summercamp %}
+                     {% for camp in summercamp %}
                      <!-- service 1  -->
                      <div class="serviceBox2">
                         <!-- service icon -->
                         <div class="service-icon">
-                           <a href="services-single.html">
-                           <img src="img/services/service1.jpg" alt="" class="blob img-fluid">
+                           <a href="{{camp.get_absolute_url}}">
+                           <img src="{{camp.photo_main.url}}" alt="" class="blob img-fluid">
                            </a>
                         </div>
                         <!-- service content -->
                         <div class="service-content">
-                           <a href="services-single.html">
-                              <h4 class="service-head">Daycare</h4>
+                           <a href="{{camp.get_absolute_url}}">
+                              <h4 class="service-head">{{camp.name}}</h4>
                            </a>
                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
+                              {{camp.short_description}}
                            </p>
                            <!-- Button -->	 
-                           <a href="services-single.html" class="btn btn-quaternary  btn-sm mt-2 ml-1">Read More</a>
+                           <a href={{camp.get_absolute_url}} class="btn btn-quaternary  btn-sm mt-2 ml-1">Read More</a>
                         </div>
                      </div>
-                     <!-- service 2  -->
-                     <div class="serviceBox2">
-                        <!-- service icon -->
-                        <div class="service-icon">
-                           <a href="services-single.html">
-                           <img src="img/services/service2.jpg" alt="" class="blob2 img-fluid">
-                           </a>
-                        </div>
-                        <!-- service content -->
-                        <div class="service-content">
-                           <a href="services-single.html">
-                              <h4 class="service-head">Summer Camp</h4>
-                           </a>
-                           <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
-                           </p>
-                           <!-- Button -->	 
-                           <a href="services-single.html" class="btn btn-quaternary btn-sm mt-2 ml-1">Read More</a>
-                        </div>
-                     </div>
-                     <!-- service 3  -->
-                     <div class="serviceBox2">
-                        <!-- service icon -->
-                        <div class="service-icon">
-                           <a href="services-single.html">
-                           <img src="img/services/service3.jpg" alt="" class="blob img-fluid">
-                           </a>			   
-                        </div>
-                        <!-- service content -->
-                        <div class="service-content">
-                           <a href="services-single.html">
-                              <h4 class="service-head">Infant Care</h4>
-                           </a>
-                           <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
-                           </p>
-                           <!-- Button -->	 
-                           <a href="services-single.html" class="btn btn-quaternary btn-sm mt-2 ml-1">Read More</a>
-                        </div>
-                     </div>
-                     <!-- service 4  -->
-                     <div class="serviceBox2">
-                        <!-- service icon -->
-                        <div class="service-icon">
-                           <a href="services-single.html">
-                           <img src="img/services/service4.jpg" alt="" class="blob2 img-fluid">
-                           </a>
-                        </div>
-                        <!-- service content -->
-                        <div class="service-content">
-                           <a href="services-single.html">
-                              <h4 class="service-head">Classes</h4>
-                           </a>
-                           <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
-                           </p>
-                           <!-- Button -->	 
-                           <a href="services-single.html" class="btn btn-quaternary btn-sm mt-2 ml-1">Read More</a>
-                        </div>
-                     </div>
-                     <!-- service 5 -->
-                     <div class="serviceBox2">
-                        <!-- service icon -->
-                        <div class="service-icon">
-                           <a href="services-single.html">
-                           <img src="img/services/service5.jpg" alt="" class="blob img-fluid">
-                           </a>
-                        </div>
-                        <!-- service content -->
-                        <div class="service-content">
-                           <a href="services-single.html">
-                              <h4 class="service-head">Activities</h4>
-                           </a>
-                           <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam rhoncus.
-                           </p>
-                           <!-- Button -->	 
-                           <a href="services-single.html" class="btn btn-quaternary btn-sm mt-2 ml-1">Read More</a>
-                        </div>
-                     </div>
+                     {% endfor %}
+                     {% else %}
+                     <p>No information is available now</p>
+                     {% endif %}
                   </div>
                   <!-- /owl-services -->
                </div>
@@ -159,7 +71,7 @@
             <div class="container block-padding">
                <div class="row">
                   <div class="col-lg-6">
-                     <img src="img/services/serviceimg1.jpg" alt="" class="img-fluid rounded">
+                     <img src="{% static 'img/services/serviceimg1.jpg' %}" alt="" class="img-fluid rounded">
                      <!-- ornament-->
                      <div class="ornament-stars" data-aos="fade-up-right"></div>
                   </div>
@@ -219,4 +131,7 @@
             <!-- /container -->
          </div>
          <!-- /page -->
+      </div>   
 {% endblock %}
+
+ 

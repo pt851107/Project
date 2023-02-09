@@ -5,6 +5,5 @@ app_name = 'summercamp'
 
 urlpatterns = [
     path('', views.index, name='summercamp'),
-    path('', views.product_list, name = 'product_list'),
-    path('<int:id>/<slug:slug>/', views.product_detail, name='product_detail') 
+    path('<int:id>/<slug:slug>/', views.camp_detail, name='camp_detail') 
 ]

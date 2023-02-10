@@ -21,9 +21,20 @@
                  </ul>
                  <!-- /End Social Links -->
                  <!-- Cart & Login -->
-                 <ul class="contact-details float-right">
-                      <li><i class="fa fa-shopping-cart"></i><a href="#">Cart</a></li>
-                      <li><i class="fa fa-user"></i><a href="#">Log In</a></li>
+                 <ul class="cart float-right cart-inline">
+                      <li class="cart-inline-item fas fa-shopping-cart" style="color:yellow">
+                        {% with total_items=shopping_cart|length %}
+                        {% if total_items > 0 %}
+                        Your Cart:   
+                        <a href="{% url 'shopping_cart:cart_detail' %}">
+                        {{total_items}} item{{total_items|pluralize}}
+                        </a>   
+                        {% else %}
+                        <span style="color:white">Your Cart is Empty</span>
+                        {% endif %}
+                        {% endwith %}
+                      </li>
+                      <li class="cart-inline-item fas fa-user" style="color:yellow"><a href="#"> Log In</a></li>
                  </ul>
                  <!-- /End Cart & Login -->
               </div>
@@ -49,11 +60,6 @@
              </button>
              <div class="collapse navbar-collapse collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                   <!-- menu item -->
-                   <li class="nav-item">
-                      <a class="nav-link" href="{% url 'index' %}">Home
-                      </a>
-                   </li>
                    <!-- menu item -->
                    <li class="nav-item">
                       <a class="nav-link" href="{% url 'daycare' %}">Daycare

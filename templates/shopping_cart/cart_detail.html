@@ -52,9 +52,16 @@
                             </a>
                         </td>
                         <td class="text-left">{{camp.name}}<br>{{camp.camp_date}}</td>
-                        <td class="text-center">{{item.quantity}}</td>
+                        <td class="text-center">
+                            <form action="{% url 'cart_detail:cart_add' camp.id %}" method="post">
+                                {{ item.update_quantity_form.quantity }}
+                                {{ item.update_quantity_form.override }}
+                                <input type="submit" value="Update">
+                                {% csrf_token %}
+                            </form>
+                        </td>
                         <td>
-                            <form class="text-center" action="{% url "cart_detail:cart_remove" camp.id %}" method="post">
+                            <form class="text-center" action="{% url 'cart_detail:cart_remove' camp.id %}" method="post">
                                 <input type="submit" value="Remove">
                                 {% csrf_token %}
                             </form>
